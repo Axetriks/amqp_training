@@ -1,4 +1,4 @@
-package fr.lernejo.chat;
+package fr.lernejo.server;
 
 import java.util.List;
 
@@ -13,11 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ChatMessageController {
     
-    ChatMessageListener chat;
+    public ChatMessageListener chat;
 
     public ChatMessageController(@Autowired ChatMessageListener chat){
         this.chat = chat;
     }
+
 
     @RequestMapping(value = "/api/message", method = RequestMethod.GET,
                 produces = MediaType.APPLICATION_JSON_VALUE)

@@ -1,4 +1,4 @@
-package fr.lernejo.chat;
+package fr.lernejo.server;
 
 import java.util.ArrayList;
 import java.util.List;

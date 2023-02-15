@@ -1,11 +1,11 @@
-package fr.lernejo.chat;
+package fr.lernejo.server;
 
 
 import org.springframework.stereotype.Component;
 
 @Component
 public class ChatMessageListener {
-    ChatMessageRepository repo;
+    public ChatMessageRepository repo;
 
     public ChatMessageListener(ChatMessageRepository repo){
         this.repo = repo;
@@ -14,6 +14,5 @@ public class ChatMessageListener {
     public void onMessage(String message){
 
         repo.addChatMessage(message);
-        System.out.println(repo.repo.get(repo.repo.indexOf(message)));
     }
 }
